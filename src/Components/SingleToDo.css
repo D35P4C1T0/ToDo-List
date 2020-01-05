@@ -1,0 +1,45 @@
+/* Styling for a line-item row */
+.itemRow {
+  max-width: 33em;
+  min-height: 2em;
+  display: grid;
+  grid-template-columns: 85% 1% 0%;
+  align-items: center;
+  grid-column-gap: 1em;
+  grid-template-rows: 100%;
+  justify-content: center;
+  font-size: 1.25rem;
+  background-color: #36495f;
+  /* border: 5px rgb(228, 225, 225); */
+  padding-left: 0.5rem;
+}
+
+/* Styling for the text within a line-item */
+.lineRowText {
+  display: grid;
+  grid-template-columns: minmax(2em, auto) 1fr;
+}
+.lineRowText:hover {
+  cursor: pointer;
+}
+
+/*Auto added via the index of the item in state.itemsArr */
+.evenRowCond {
+  background-color: #253446;
+  /* border: 1px rgb(140, 141, 140); */
+}
+/*Added via Clicking On Line Item */
+.completeCond {
+  text-decoration: line-through;
+}
+/* Row Styling While Editing */
+.editing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+/* User Input Styling While Editing */
+/* .editingForm {
+  width: 160%;
+  color: #074d9d;
+} */

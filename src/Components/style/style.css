@@ -1,0 +1,55 @@
+ul#horizontal-list li {
+  display: inline;
+}
+
+ul#horizontal-list ul {
+  display: inline;
+}
+
+#toggle {
+  padding-left: 0.5em;
+  text-align: justify;
+}
+
+/* .icon {
+  color: #657b83;
+}
+
+.done {
+  background-color: #2aa198;
+}
+
+.notDone {
+  background-color: #dc322f;
+}
+
+.App-logo {
+  height: 5em;
+} */
+
+#taskName,
+#filterSearchBar {
+  display: inline;
+}
+
+h2,
+button {
+  display: inline;
+  margin-right: 1em;
+}
+
+#listaAttività {
+  margin-left: -2.5em;
+}
+
+span {
+  display: block;
+  word-wrap: break-word;
+  min-width: 15%;
+  /* min-width: 10em; */
+}
+
+.addNotaButton,
+.Input {
+  display: inline;
+}

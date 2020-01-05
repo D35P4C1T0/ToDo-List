@@ -1,0 +1,13 @@
+/* Styling for the Title and main user input box */
+.header {
+    border: 3px dashed rgb(140, 141, 140);
+    width: 404px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;   
+}
+
+/* Styling for the full display of line-items */
+.itemsGrid{
+    margin-top: .5rem;    
+}
