@@ -1,8 +1,7 @@
-import React, { Component } from "react"
+import React from "react"
 import ListMain from "./Components/ListMain.js"
 
 const App = () => {
-  let list = <ListMain />
-  return list
+  return <ListMain />
 }
 export default App

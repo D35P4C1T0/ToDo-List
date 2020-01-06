@@ -4,7 +4,6 @@ Description: Handles the creation of each line-item, calls the strike-through te
 
 //Scripts:
 import React, { Component } from "react"
-import EditButton from "./EditButton.js"
 import RemoveButton from "./RemoveButton.js"
 
 //Styling:
@@ -73,9 +72,9 @@ class Edit extends Component {
         </form>
       </span>
     )
-    const userInputLabel = (
-      <label htmlFor="todo Input Edit" className="taskFiled"></label>
-    )
+    // const userInputLabel = (
+    //   <label htmlFor="todo Input Edit" className="taskFiled"></label>
+    // )
     const removeButton = (
       <RemoveButton handleDelete={this.props.handleDelete} id={this.props.id} />
     )

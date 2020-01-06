@@ -64,6 +64,18 @@ class ListMain extends Component {
     })
   }
 
+  componentDidMount() {
+    if (localStorage.getItem("state")) {
+      this.setState(JSON.parse(localStorage.getItem("state")))
+    } else {
+      localStorage.setItem("state", JSON.stringify(this.state))
+    }
+  }
+
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem("state", JSON.stringify(nextState))
+  }
+
   render() {
     //index -- used to create the ordered numbers on line-items
     //item -- is used to store the todo string
