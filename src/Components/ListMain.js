@@ -11,6 +11,8 @@ import Form from "./Form.js"
 import SingleToDo from "./SingleTodo.js"
 import "./style/style.css"
 import "./style/dark.min.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faStickyNote } from "@fortawesome/free-solid-svg-icons"
 
 class ListMain extends Component {
   constructor(props) {
@@ -89,7 +91,13 @@ class ListMain extends Component {
     return (
       <div>
         <div className="header">
-          <h1>To-Do List: </h1>
+          <h1>
+            <FontAwesomeIcon
+              icon={faStickyNote}
+              style={{ marginRight: "0.3em" }}
+            />
+            To-Do List
+          </h1>
           <Form addItem={this.addItem} />
         </div>
         <div className="itemsGrid">{items}</div>

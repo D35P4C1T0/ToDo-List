@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
-import ListMain from './Components/ListMain.js';
+import React, { Component } from "react"
+import ListMain from "./Components/ListMain.js"
 
-class App extends Component {
-  render() {
-    return(
-      <ListMain />
-    )
-  }
-
+const App = () => {
+  let list = <ListMain />
+  return list
 }
-export default App;
+export default App
