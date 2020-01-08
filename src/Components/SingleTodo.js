@@ -1,12 +1,14 @@
-/* 
-Description: Handles the creation of each line-item, calls the strike-through text function
-*/
+/**
+ * This module handles the creation of each line-item, calls
+ * the strike-through text function
+ * and does other stuff.
+ */
 import React, { Component } from "react"
 
-// Recycle Bin button module
+/*Recycle Bin button module*/
 import RemoveButton from "./RemoveButton.js"
 
-//Styling:
+/*Styling:*/
 import "./SingleToDo.css"
 import "./style/dark.min.css"
 import "./style/style.css"
@@ -20,18 +22,17 @@ class Edit extends Component {
     }
   }
 
-  //Adds strikethrough text upon clicking line-item
+  /**Adds strikethrough text upon clicking line-item*/
   handleClick = () => {
     this.props.handleComplete(this.props.id)
   }
-  //Handle user inputting data while editing
-  //Not sure if this should actually be handled via FORM in order to have DRY code
+  /**Handle user inputting data while editing*/
   handleChange = event => {
     this.setState({
       item: event.target.value
     })
   }
-  //Handles submission of a line-item edit
+  /**Handles submission of a line-item edit. This might not be implemented in the final version*/
   handleEditSubmit = event => {
     event.preventDefault()
     if (this.state.item !== "") {

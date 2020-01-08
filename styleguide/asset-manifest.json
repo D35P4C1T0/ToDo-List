@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1dd09f28.chunk.css",
+    "main.js": "/build/main.424153b4.js",
+    "runtime-main.js": "/build/bundle.50416cb9.js",
+    "build/2.deb10fae.js": "/build/2.deb10fae.js",
+    "build/2.deb10fae.js.LICENSE": "/build/2.deb10fae.js.LICENSE",
+    "index.html": "/index.html",
+    "precache-manifest.4f9e701dfc043a173353c62a28226309.js": "/precache-manifest.4f9e701dfc043a173353c62a28226309.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.1dd09f28.chunk.css.map": "/static/css/main.1dd09f28.chunk.css.map"
+  },
+  "entrypoints": [
+    "build/bundle.50416cb9.js",
+    "build/2.deb10fae.js",
+    "static/css/main.1dd09f28.chunk.css",
+    "build/main.424153b4.js"
+  ]
+}

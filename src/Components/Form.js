@@ -1,10 +1,10 @@
-/* 
-Description: Handles the user input for adding an additional item
-*/
-
 import React, { Component } from "react"
 import uuid from "uuid/v4"
 
+/**
+ * The Form component is what handles the major part
+ * of the user input "post processing" and additional items
+ */
 class Form extends Component {
   constructor(props) {
     super(props)
@@ -17,13 +17,13 @@ class Form extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  //automatically sets the local state while user types
+  /**Automatically sets the local state while user types*/
   handleChange(event) {
     this.setState({
       item: event.target.value
     })
   }
-  //pushes the item to the ListMain state
+  /**Pushes the item to the ListMain state*/
   handleSubmit(event) {
     event.preventDefault()
     if (this.state.item !== "") {

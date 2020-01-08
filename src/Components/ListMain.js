@@ -11,17 +11,23 @@ import React, { Component } from "react"
 // The form module I use
 import Form from "./Form.js"
 
-// Single ToDo entry module
+/* Single ToDo entry module */
 import SingleToDo from "./SingleTodo.js"
 
-// Custom css styles and frameworks
+/* Custom css styles and frameworks */
 import "./style/style.css"
 import "./style/dark.min.css"
 
-// Awesome Icons module
+/* Awesome Icons module */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStickyNote } from "@fortawesome/free-solid-svg-icons"
 
+/**
+This is the main component which stores the
+tasks in standard data structures, such as a 
+standard JS array. It manages all the actions which
+can change the list content.
+*/
 class ListMain extends Component {
   constructor(props) {
     super(props)
@@ -35,11 +41,12 @@ class ListMain extends Component {
     this.editItem = this.editItem.bind(this)
   }
 
-  //Adds an item to the state.itemsArr
+  /*Adds an item to the state.itemsArr*/
   addItem(newItem) {
     this.setState(state => ({ itemsArr: [...state.itemsArr, newItem] }))
   }
-  //Edits an existing item
+
+  /*Edits an existing item*/
   editItem(editedItem) {
     const editedItemsArr = this.state.itemsArr.map(obj =>
       obj.id === editedItem.id
@@ -49,7 +56,7 @@ class ListMain extends Component {
     this.setState({ itemsArr: editedItemsArr })
   }
 
-  //Adds strikethrough text upon clicking line-item
+  /*Adds strikethrough text upon clicking line-item*/
   handleComplete(id) {
     const newItemsArr = this.state.itemsArr.map(obj =>
       obj.id === id ? { ...obj, complete: !obj.complete } : obj
@@ -57,7 +64,6 @@ class ListMain extends Component {
     this.setState({ itemsArr: newItemsArr })
   }
 
-  //not sure if this should be connected to its grandchild directly or if all info should go through the parent
   handleEditClick(id) {
     const editedItemsArr = this.state.itemsArr.map(obj =>
       obj.id === id ? { ...obj, editing: !obj.editing } : obj
@@ -65,7 +71,7 @@ class ListMain extends Component {
     this.setState({ itemsArr: editedItemsArr })
   }
 
-  //Removes a line-item upon clicking the trash icon
+  /*Removes a line-item once the trash icon is clicked*/
   handleDelete(id) {
     this.setState({
       itemsArr: this.state.itemsArr.filter(obj => obj.id !== id)
@@ -85,17 +91,16 @@ class ListMain extends Component {
   }
 
   render() {
-    //index -- used to create the ordered numbers on line-items
-    //item -- is used to store the todo string
-    //id -- unique indicator of this item
-    //complete -- tracks whether the line-item should have strikethrough text or not
-    //editing -- tracks whether the line item is being edited
-    //handleDelete -- handles the removal of a line-item
-    //handles the strikethrough text boolean
+    /*index -- used to create the ordered numbers on line-items*/
+    /*item -- is used to store the todo string*/
+    /*id -- unique indicator of this item*/
+    /*complete -- tracks whether the line-item should have strikethrough text or not*/
+    /*editing -- tracks whether the line item is being edited*/
+    /*handleDelete -- handles the removal of a line-item*/
+    /*handles the strikethrough text boolean*/
     const items = this.state.itemsArr.map((obj, index) => (
       <SingleToDo
         key={obj.id}
-        //pretty sure I can just pass the whole object in here and not rewrite everything
         index={index}
         item={obj.item}
         id={obj.id}
