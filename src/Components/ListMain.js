@@ -7,10 +7,18 @@ Description: Main Parent - Holds main state and handles all edited, deleting, an
 //The input feeds into a setState on ListMain that does the same thing as linethrough example but instead changes itemsArr.obj.item
 //
 import React, { Component } from "react"
+
+// The form module I use
 import Form from "./Form.js"
+
+// Single ToDo entry module
 import SingleToDo from "./SingleTodo.js"
+
+// Custom css styles and frameworks
 import "./style/style.css"
 import "./style/dark.min.css"
+
+// Awesome Icons module
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStickyNote } from "@fortawesome/free-solid-svg-icons"
 

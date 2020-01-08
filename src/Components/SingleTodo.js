@@ -1,9 +1,9 @@
 /* 
 Description: Handles the creation of each line-item, calls the strike-through text function
 */
-
-//Scripts:
 import React, { Component } from "react"
+
+// Recycle Bin button module
 import RemoveButton from "./RemoveButton.js"
 
 //Styling:
